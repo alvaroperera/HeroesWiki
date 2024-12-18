@@ -23,7 +23,7 @@ class HeroTableCellViewController: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func fillCell(with hero: Hero) {
+    func fillCell(hero: Hero) {
         heroNameView.text = hero.name
         heroImgView.loadFrom(url: hero.image.url)
     }
