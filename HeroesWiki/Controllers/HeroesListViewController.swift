@@ -9,8 +9,6 @@ import UIKit
 
 class HeroesListViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
     
-    
-
     @IBOutlet weak var heroListTable: UITableView!
     
     var heroList: [Hero] = []
@@ -69,5 +67,14 @@ class HeroesListViewController: UIViewController, UITableViewDataSource, UISearc
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "goToHeroDetail" {
+                if let indexPath = heroListTable.indexPathForSelectedRow {
+                    let hero = heroList[indexPath.row]
+                    let destinationVC = segue.destination as! HeroDetailViewController
+                    destinationVC.hero = hero }
+            }
+        }
 }
 
