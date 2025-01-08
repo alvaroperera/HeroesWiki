@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HeroTableCellViewController: UITableViewCell {
+class HeroCollectionCellViewController: UICollectionViewCell {
 
     @IBOutlet weak var heroImgView: UIImageView!
     
@@ -15,12 +15,6 @@ class HeroTableCellViewController: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
     
     func fillCell(hero: Hero) {
