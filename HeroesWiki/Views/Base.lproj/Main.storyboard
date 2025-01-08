@@ -39,39 +39,50 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PnA-Vo-Njm">
-                                    <size key="itemSize" width="199" height="290"/>
+                                    <size key="itemSize" width="243" height="281"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" reuseIdentifier="Cell" id="yGn-GK-gh2" customClass="HeroCollectionCellViewController" customModule="HeroesWiki" customModuleProvider="target">
-                                        <rect key="frame" x="97" y="0.0" width="199" height="290"/>
+                                        <rect key="frame" x="75" y="0.0" width="243" height="281"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eBE-dv-Wv5">
-                                            <rect key="frame" x="0.0" y="0.0" width="199" height="290"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="243" height="281"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f3A-5o-2J7">
-                                                    <rect key="frame" x="0.0" y="0.0" width="203" height="238"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f3A-5o-2J7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="243" height="281"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hero Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bve-ad-xHD">
-                                                    <rect key="frame" x="21" y="246" width="153" height="36"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hero Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bve-ad-xHD">
+                                                    <rect key="frame" x="15" y="254.00000000000003" width="213" height="20.333333333333343"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" red="0.4456476466" green="0.62158071530000003" blue="0.74739283649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </label>
                                             </subviews>
                                             <color key="tintColor" systemColor="linkColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="f3A-5o-2J7" secondAttribute="trailing" id="0My-u2-DRf"/>
+                                                <constraint firstItem="f3A-5o-2J7" firstAttribute="top" secondItem="eBE-dv-Wv5" secondAttribute="top" id="5vg-Jd-snu"/>
+                                                <constraint firstItem="bve-ad-xHD" firstAttribute="leading" secondItem="eBE-dv-Wv5" secondAttribute="leading" constant="45" id="9ks-GG-63d"/>
+                                                <constraint firstAttribute="bottom" secondItem="f3A-5o-2J7" secondAttribute="bottom" id="GsW-tZ-nUj"/>
+                                                <constraint firstItem="bve-ad-xHD" firstAttribute="leading" secondItem="eBE-dv-Wv5" secondAttribute="leading" constant="15" id="IPY-G7-ZFH"/>
+                                                <constraint firstItem="bve-ad-xHD" firstAttribute="top" secondItem="f3A-5o-2J7" secondAttribute="bottom" constant="-27" id="MvJ-mD-rwG"/>
+                                                <constraint firstItem="f3A-5o-2J7" firstAttribute="leading" secondItem="eBE-dv-Wv5" secondAttribute="leading" id="Nql-07-BwO"/>
+                                                <constraint firstAttribute="trailing" secondItem="bve-ad-xHD" secondAttribute="trailing" constant="15" id="eBi-61-4gz"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" systemColor="linkColor"/>
-                                        <size key="customSize" width="199" height="290"/>
+                                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                                        <size key="customSize" width="243" height="281"/>
                                         <connections>
                                             <outlet property="backgroundView" destination="eBE-dv-Wv5" id="Eg6-Q9-Nff"/>
                                             <outlet property="heroImgView" destination="f3A-5o-2J7" id="6Ew-lX-Wob"/>
                                             <outlet property="heroNameView" destination="bve-ad-xHD" id="Mlp-f2-3xW"/>
+                                            <segue destination="Zu7-yV-ztH" kind="show" identifier="goToHeroDetail" id="ZgT-7g-2fe"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -93,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1066.4122137404579" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1043.5114503816794" y="-76.760563380281695"/>
         </scene>
         <!--Hero Detail-->
         <scene sceneID="weN-z3-epR">
@@ -133,8 +144,14 @@
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

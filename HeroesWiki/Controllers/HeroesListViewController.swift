@@ -7,13 +7,11 @@
 
 import UIKit
 
-class HeroesListViewController: UIViewController, UICollectionViewDataSource, UISearchBarDelegate, UICollectionViewDelegate {
+class HeroesListViewController: UIViewController, UICollectionViewDataSource, UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var heroListCollectionView: UICollectionView!
     
     var heroList: [Hero] = []
-    let numberOfColumns: CGFloat = 4 // Número de columnas
-    let cellSpacing: CGFloat = 10 // Espaciado entre celdas
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +37,7 @@ class HeroesListViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            let columns = 2
+            let columns = 3
             let spacing = (collectionView.collectionViewLayout as! UICollectionViewFlowLayout).minimumInteritemSpacing
             let screenWidth = collectionView.frame.size.width
             let leftSpace = screenWidth - spacing * CGFloat(columns - 1)
@@ -47,14 +45,6 @@ class HeroesListViewController: UIViewController, UICollectionViewDataSource, UI
             let height = width * 1.33 //ratio
             return CGSize(width: width, height: height)
         }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return cellSpacing
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return cellSpacing
-    }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let query = searchBar.text {
