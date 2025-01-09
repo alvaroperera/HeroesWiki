@@ -125,6 +125,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yqo-de-GPh">
+                                <rect key="frame" x="0.0" y="781" width="393" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem title="Stats" image="pentagon.lefthalf.filled" catalog="system" id="hT5-rZ-0jE"/>
+                                    <tabBarItem title="Biography" image="person.fill" catalog="system" id="hiJ-k5-LPt"/>
+                                    <tabBarItem systemItem="more" id="qFP-HP-fW7"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2qR-PR-y2b"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -141,6 +151,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pentagon.lefthalf.filled" catalog="system" width="128" height="120"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
