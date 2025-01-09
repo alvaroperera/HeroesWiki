@@ -85,9 +85,14 @@ class HeroesListViewController: UIViewController, UICollectionViewDataSource, UI
         if segue.identifier == "goToHeroDetail" {
             if let indexPath = heroListCollectionView.indexPathsForSelectedItems?.first {
                 let hero = heroList[indexPath.row]
-                let destinationVC = segue.destination as! HeroDetailViewController
-                destinationVC.hero = hero }
+                let destinationVC = segue.destination as? HeroDetailTabBarController
+                destinationVC!.hero = hero }
         }
     }
 }
 
+/*
+ if let tabBarController = segue.destination as? MyTabBarController {
+         tabBarController.sharedData = "Datos compartidos para todos los tabs"
+     }
+ */

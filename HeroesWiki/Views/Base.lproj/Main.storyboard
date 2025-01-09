@@ -25,7 +25,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T6t-w5-TLG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="131" y="-125"/>
         </scene>
         <!--Heroes List-->
         <scene sceneID="tne-QT-ifu">
@@ -82,7 +82,7 @@
                                             <outlet property="backgroundView" destination="eBE-dv-Wv5" id="Eg6-Q9-Nff"/>
                                             <outlet property="heroImgView" destination="f3A-5o-2J7" id="6Ew-lX-Wob"/>
                                             <outlet property="heroNameView" destination="bve-ad-xHD" id="Mlp-f2-3xW"/>
-                                            <segue destination="Zu7-yV-ztH" kind="show" identifier="goToHeroDetail" id="ZgT-7g-2fe"/>
+                                            <segue destination="WB8-cP-4Om" kind="presentation" identifier="goToHeroDetail" id="ZgT-7g-2fe"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -106,64 +106,114 @@
             </objects>
             <point key="canvasLocation" x="1015" y="-125"/>
         </scene>
-        <!--Hero Detail-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="tyy-pH-cKt">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="WB8-cP-4Om" userLabel="Tab Bar Controller" customClass="HeroDetailTabBarController" customModule="HeroesWiki" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="iYr-ds-JLR"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DDq-p4-FDN">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Zu7-yV-ztH" kind="relationship" relationship="viewControllers" id="vMR-Ix-q3w"/>
+                        <segue destination="YPI-SM-Q8Y" kind="relationship" relationship="viewControllers" id="8cF-4Z-XbD"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cVk-mV-4P2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764" y="-125"/>
+        </scene>
+        <!--Hero Stat Detail Tab-->
         <scene sceneID="weN-z3-epR">
             <objects>
-                <viewController title="Hero Detail" id="Zu7-yV-ztH" customClass="HeroDetailViewController" customModule="HeroesWiki" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Hero Detail" id="Zu7-yV-ztH" userLabel="Hero Stat Detail Tab" customClass="HeroDetailViewController" customModule="HeroesWiki" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Wd-Sj-rBi">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z7B-Vr-AFD">
-                                <rect key="frame" x="76" y="143" width="240" height="253"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z7B-Vr-AFD">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="525"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="525" id="oXu-GX-1ON"/>
+                                    <constraint firstAttribute="width" constant="393" id="owa-fZ-kmT"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Super Hero Name Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76N-0p-MEg">
-                                <rect key="frame" x="73" y="423" width="256" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yqo-de-GPh">
-                                <rect key="frame" x="0.0" y="781" width="393" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem title="Stats" image="pentagon.lefthalf.filled" catalog="system" id="hT5-rZ-0jE"/>
-                                    <tabBarItem title="Biography" image="person.fill" catalog="system" id="hiJ-k5-LPt"/>
-                                    <tabBarItem systemItem="more" id="qFP-HP-fW7"/>
-                                </items>
-                            </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2qR-PR-y2b"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="z7B-Vr-AFD" firstAttribute="trailing" secondItem="2qR-PR-y2b" secondAttribute="trailing" id="1gO-gt-JKU"/>
+                            <constraint firstItem="z7B-Vr-AFD" firstAttribute="top" secondItem="2qR-PR-y2b" secondAttribute="top" id="43U-Gd-XsN"/>
+                            <constraint firstItem="z7B-Vr-AFD" firstAttribute="leading" secondItem="2qR-PR-y2b" secondAttribute="leading" id="BAH-s3-oeR"/>
+                            <constraint firstItem="z7B-Vr-AFD" firstAttribute="top" secondItem="2qR-PR-y2b" secondAttribute="top" id="FzH-jR-S2I"/>
+                            <constraint firstItem="2qR-PR-y2b" firstAttribute="trailing" secondItem="z7B-Vr-AFD" secondAttribute="trailing" id="OxC-6b-sHB"/>
+                            <constraint firstItem="z7B-Vr-AFD" firstAttribute="leading" secondItem="2qR-PR-y2b" secondAttribute="leading" id="u9v-me-jIB"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Stats" image="pentagon.fill" catalog="system" id="Utj-GJ-h3u"/>
                     <navigationItem key="navigationItem" id="HKm-O2-gqR"/>
                     <connections>
                         <outlet property="heroImageView" destination="z7B-Vr-AFD" id="Of4-bH-uIu"/>
-                        <outlet property="heroNameTextView" destination="76N-0p-MEg" id="9gL-W9-iOM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GbW-oO-mhe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1904.5801526717557" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="2635.8778625954196" y="-692.25352112676057"/>
+        </scene>
+        <!--Hero Stat Detail Tab-->
+        <scene sceneID="499-W3-II6">
+            <objects>
+                <viewController title="Hero Detail" id="YPI-SM-Q8Y" userLabel="Hero Stat Detail Tab" customClass="HeroDetailViewController" customModule="HeroesWiki" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rBM-p8-NQB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BxW-6L-ac5">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="525"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="393" id="eis-8h-hO2"/>
+                                    <constraint firstAttribute="height" constant="525" id="fjL-53-CTt"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sHQ-Ov-oaf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sHQ-Ov-oaf" firstAttribute="trailing" secondItem="BxW-6L-ac5" secondAttribute="trailing" id="0Ko-jG-ZIc"/>
+                            <constraint firstItem="BxW-6L-ac5" firstAttribute="top" secondItem="sHQ-Ov-oaf" secondAttribute="top" id="0gW-GA-IHo"/>
+                            <constraint firstItem="BxW-6L-ac5" firstAttribute="top" secondItem="sHQ-Ov-oaf" secondAttribute="top" id="GKd-8d-Y8G"/>
+                            <constraint firstItem="BxW-6L-ac5" firstAttribute="leading" secondItem="sHQ-Ov-oaf" secondAttribute="leading" id="N5D-lX-KNz"/>
+                            <constraint firstItem="BxW-6L-ac5" firstAttribute="leading" secondItem="sHQ-Ov-oaf" secondAttribute="leading" id="PhP-fo-Bs3"/>
+                            <constraint firstItem="BxW-6L-ac5" firstAttribute="trailing" secondItem="sHQ-Ov-oaf" secondAttribute="trailing" id="RxB-yt-IMd"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Biography" image="person.fill" catalog="system" id="wRW-4V-fr1"/>
+                    <navigationItem key="navigationItem" id="1p2-iI-jDd"/>
+                    <connections>
+                        <outlet property="heroImageView" destination="BxW-6L-ac5" id="eGi-4i-ONY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coW-xO-6Eb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2636" y="-30"/>
         </scene>
     </scenes>
     <resources>
-        <image name="pentagon.lefthalf.filled" catalog="system" width="128" height="120"/>
+        <image name="pentagon.fill" catalog="system" width="128" height="112"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemMintColor">
-            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

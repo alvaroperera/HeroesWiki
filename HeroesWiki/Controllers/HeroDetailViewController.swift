@@ -20,7 +20,10 @@ class HeroDetailViewController: UIViewController {
     }
     
     func loadData() {
-        heroNameTextView.text = hero!.name
+        if let tabBarController = self.tabBarController as? HeroDetailTabBarController {
+            hero = tabBarController.hero
+        }
+        // heroNameTextView.text = hero!.name
         heroImageView.loadFrom(url: hero!.image.url)
     }
 }
