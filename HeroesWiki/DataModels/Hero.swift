@@ -12,6 +12,7 @@ struct Hero: Codable {
     let name: String
     let image: Image
     let biography: Biography
+    let powerstats: Powerstats
 }
 
 struct HeroResponse: Codable {
@@ -30,6 +31,16 @@ struct Biography: Codable {
         case placeOfBirth = "place-of-birth"
     }
 }
+
+struct Powerstats: Codable {
+    let intelligence: Int
+    let strength: Int
+    let speed: Int
+    let durability: Int
+    let power: Int
+    let combat: Int
+}
+
 struct Image: Codable {
     let url: String
 }
