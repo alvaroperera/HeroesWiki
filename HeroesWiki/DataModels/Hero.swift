@@ -33,12 +33,12 @@ struct Biography: Codable {
 }
 
 struct Powerstats: Codable {
-    let intelligence: Int
-    let strength: Int
-    let speed: Int
-    let durability: Int
-    let power: Int
-    let combat: Int
+    let intelligence: String
+    let strength: String
+    let speed: String
+    let durability: String
+    let power: String
+    let combat: String
 }
 
 struct Image: Codable {
